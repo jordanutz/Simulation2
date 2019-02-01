@@ -57,7 +57,7 @@ class Wizard extends Component {
           <div id="WizardDirectory" className="Directory">
             <div className="WizardHeader">
               <h1 id="WizardHeader">Add New Listing</h1>
-              <button id="CancelButton">Cancel</button>
+              <Link to='/'><button id="CancelButton">Cancel</button></Link>
             </div>
             <div className="WizardInput">
               <h2>Property Name:</h2><input value={this.state.name} onChange={this.handleName}/><br/>

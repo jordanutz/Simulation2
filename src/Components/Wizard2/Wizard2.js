@@ -25,7 +25,7 @@ class Wizard2 extends Component {
         <div id="WizardDirectory" className="Directory">
           <div className="WizardHeader">
             <h1 id="WizardHeader">Add New Listing</h1>
-            <button id="CancelButton">Cancel</button>
+            <Link to='/'><button id="CancelButton">Cancel</button></Link>
           </div>
           <div className="WizardInput">
             <span>Image:</span><input value={this.state.image} onChange={this.handleImage}/>

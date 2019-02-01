@@ -3,6 +3,7 @@ import './Wizard3.css'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {getListings} from '../../redux/reducer'
+import {Link} from 'react-router-dom'
 
 class Wizard3 extends Component {
   constructor () {
@@ -61,7 +62,7 @@ class Wizard3 extends Component {
         <div id="WizardDirectory" className="Directory">
           <div className="WizardHeader">
             <h1 id="WizardHeader">Add New Listing</h1>
-            <button id="CancelButton">Cancel</button>
+            <Link to='/'><button id="CancelButton">Cancel</button></Link>
           </div>
           <div className="WizardInput">
             <span>Mortgage:</span><input value={this.state.mortgage} onChange={this.handleMortgage}/>

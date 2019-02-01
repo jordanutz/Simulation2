@@ -8,6 +8,10 @@ import {getListings} from '../../redux/reducer'
 import House from '../House/House'
 
 class Dashboard extends Component {
+  constructor () {
+    super()
+    this.removeListing = this.removeListing.bind(this)
+  }
 
   componentDidMount () {
     this.fireListings()
@@ -20,7 +24,7 @@ class Dashboard extends Component {
     })
   }
 
-  removeListing = (id) => {
+  removeListing (id) {
     axios.delete(`/api/listings/${id}`).then( res => {
       this.props.getListings(res.data)
       this.fireListings()
