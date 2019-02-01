@@ -1,0 +1,40 @@
+main {
+  width: 100%;
+  height: 90vh;
+  background: #AFD4C0;
+}
+
+.Directory {
+  max-width: 50%;
+  height: auto;
+  background: #E5F4EC;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.Dashboard {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 2px solid #DEDEDE;
+  margin: 0 .5rem;
+}
+
+.Dashboard h1 {
+  font-size: 2.5rem;
+}
+
+.Dashboard button {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  background: #8AEA92;
+  border: none;
+}
+
+.Listings {
+  padding: 2rem;
+}
+
+.Listings h2 {
+  margin-bottom: 1rem;
+}

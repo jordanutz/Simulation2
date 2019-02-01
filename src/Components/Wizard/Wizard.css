@@ -1,0 +1,50 @@
+.WizardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+#WizardHeader {
+  font-size: 2rem;
+}
+
+.WizardHeader button {
+  background: #FEC2C2;
+  font-weight: bolder;
+  font-size: 1.5rem;
+    border: none;
+}
+
+#WizardDirectory {
+  padding: 1rem;
+}
+
+.WizardInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.flex {
+  display: flex;
+  padding: .5rem;
+}
+
+.flex input {
+  margin: 0 .5rem;
+}
+
+.WizardSubmit button {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  background: #8AEA92;
+  border: none;
+}
+
+.WizardSubmit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
