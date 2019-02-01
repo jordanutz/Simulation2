@@ -20,12 +20,19 @@ class Dashboard extends Component {
     })
   }
 
+  removeListing = (id) => {
+    axios.delete(`/api/listings/${id}`).then( res => {
+      this.props.getListings(res.data)
+      this.fireListings()
+    })
+  }
+
   render () {
 
     const displayedListings = this.props.listings.map(listing => {
       // console.log(listing)
       return (
-        <House key={listing.id} {...listing}/>
+        <House key={listing.id} {...listing} removeListing={this.removeListing}/>
       )
     })
 

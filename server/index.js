@@ -14,6 +14,7 @@ massive(process.env.CONNECTION_STRING).then(db => {
 
 app.get('/api/listings', controller.getListings)
 app.post('/api/listing', controller.createListing)
+app.delete('/api/listings/:id', controller.deleteListing)
 
 PORT = 6000;
 app.listen(PORT, () => {

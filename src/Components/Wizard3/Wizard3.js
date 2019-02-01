@@ -43,8 +43,9 @@ class Wizard3 extends Component {
 
     console.log(listing)
 
-    axios.post('/api/listing').then(res => {
+    axios.post('/api/listing', listing).then(res => {
       this.props.getListings(res.data)
+      this.props.history.push('/')
     })
   }
 
@@ -52,6 +53,8 @@ class Wizard3 extends Component {
 
     const {name, address, city, state, zip, image} = this.props.location.state
     const {mortgage, rent} = this.state
+
+    console.log(this.props)
 
     return (
       <main>
@@ -73,16 +76,16 @@ class Wizard3 extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   console.log(state)
-//   return {
-//     listings: state.listings
-//   }
-// }
-//
-// const mapDispatchToProps = {
-//   getListings
-// }
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    listings: state.listings
+  }
+}
+
+const mapDispatchToProps = {
+  getListings
+}
 
 
-export default Wizard3;
+export default connect(mapStateToProps, mapDispatchToProps)(Wizard3);

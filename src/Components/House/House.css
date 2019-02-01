@@ -4,4 +4,16 @@
   background: #FEC2C2;
   margin: 1rem 0;
   padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.HouseImage img {
+  width: 200px;
+  height: 200px;
+}
+
+#remove {
+  width: 10px;
+  height: 10px;
 }
